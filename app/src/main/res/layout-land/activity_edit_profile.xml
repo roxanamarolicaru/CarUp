@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+
+        android:layout_marginHorizontal="16dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:background="@android:drawable/divider_horizontal_dim_dark"
+            android:gravity="left|top"
+            app:srcCompat="@android:drawable/ic_menu_camera"
+            android:contentDescription="@string/photo" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="50dp"
+            android:layout_weight="10"
+            android:contentDescription="@string/photo"
+            app:srcCompat="@drawable/ic_user1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="16dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <!--
+            -In questa sezione sono stati inseiriti elemneti di tipo EditText anzichè di tipo Textview,  ciò che li differisce è l'attributo
+             "android:inputType" che permette al sistema di fornire un appropriato metodo di input. Per esempio, se l'inputType è una password
+             numerica, il sistema offre un tastierino numerico come metodo di input, se l'inputType è un nome, il sistema offre la tastiera completa.
+
+            -La proprità "textCapSentences" nell'attributo "android:inputType" setta automaticamente la prima lettere in maiuscolo.
+
+            -Il metodo android:imeOptions="actionNext" permette di avere una tastiera con un tasto di default "Next" per i campi intermedi e
+             il metodo android:imeOptions="actionDone" permette di avere una tastiera con un tasto di default "Done" per l'ultimo campo
+        -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center|start"
+                android:imeOptions="actionSend"
+                android:inputType="textCapSentences|textPersonName"
+                android:text="@string/full_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <EditText
+                android:id="@+id/editTextNickName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center|start"
+                android:inputType="textPersonName"
+                android:text="@string/nickname"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <EditText
+                android:id="@+id/editTextEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center|start"
+                android:inputType="textEmailAddress"
+                android:text="@string/email"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <EditText
+                android:id="@+id/editTextPostalAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center|start"
+                android:inputType="textPostalAddress"
+                android:text="@string/location"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="5"
+            android:text="@string/save_data"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
